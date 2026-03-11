@@ -8,9 +8,13 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  airport_data:
-    git:
-      url: https://github.com/aashishvanand/airport-data-dart.git
+  airport_data: ^1.0.0
+```
+
+Then run:
+
+```bash
+dart pub get
 ```
 
 ## Platform Support

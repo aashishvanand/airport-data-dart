@@ -4,7 +4,7 @@ description: >-
   ICAO codes, country, continent, timezone, and more. Includes geographic proximity
   search, distance calculation, bulk operations, and statistical analysis.
 version: 1.0.0
-homepage: https://github.com/aashishvanand/airport-data-dart
+homepage: https://airportdata.dev
 repository: https://github.com/aashishvanand/airport-data-dart
 issue_tracker: https://github.com/aashishvanand/airport-data-dart/issues
 
@@ -17,3 +17,6 @@ dependencies:
 dev_dependencies:
   test: ^1.24.0
   lints: ^5.0.0
+
+false_secrets:
+  - /lib/src/airport_data_embedded.dart
