@@ -2,7 +2,8 @@ name: Publish to pub.dev
 
 on:
   push:
-    branches: [release]
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
   publish:
@@ -12,22 +13,8 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       id-token: write # Required for OIDC token authentication with pub.dev
-      contents: write # Required to push the version tag
     steps:
       - uses: actions/checkout@v6
-
-      - name: Extract version from pubspec.yaml
-        id: version
-        run: |
-          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "Detected version: $VERSION"
-
-      - name: Create and push version tag
-        run: |
-          git tag "v${{ steps.version.outputs.version }}"
-          git push origin "v${{ steps.version.outputs.version }}"
-
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: stable

@@ -1,7 +1,11 @@
+## 1.0.3
+
+- Fix automated publishing: use tag-based publish triggered by release branch
+- Upgrade actions/checkout to v6 for Node.js 24 compatibility
+
 ## 1.0.2
 
 - Automate publishing via release branch with auto-tagging
-- Upgrade actions/checkout to v6 for Node.js 24 compatibility
 
 ## 1.0.1
 
