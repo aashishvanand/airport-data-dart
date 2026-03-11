@@ -325,13 +325,11 @@ class AirportData {
     return AirportLinks(
       website: airport.website.isNotEmpty ? airport.website : null,
       wikipedia: airport.wikipedia.isNotEmpty ? airport.wikipedia : null,
-      flightradar24: airport.flightradar24Url.isNotEmpty
-          ? airport.flightradar24Url
-          : null,
+      flightradar24:
+          airport.flightradar24Url.isNotEmpty ? airport.flightradar24Url : null,
       radarbox: airport.radarboxUrl.isNotEmpty ? airport.radarboxUrl : null,
-      flightaware: airport.flightawareUrl.isNotEmpty
-          ? airport.flightawareUrl
-          : null,
+      flightaware:
+          airport.flightawareUrl.isNotEmpty ? airport.flightawareUrl : null,
     );
   }
 
@@ -350,9 +348,8 @@ class AirportData {
   /// ```
   static AirportCountryStats getAirportStatsByCountry(String countryCode) {
     final code = countryCode.toUpperCase();
-    final airports = DataLoader.loadAirports()
-        .where((a) => a.countryCode == code)
-        .toList();
+    final airports =
+        DataLoader.loadAirports().where((a) => a.countryCode == code).toList();
 
     if (airports.isEmpty) {
       throw StateError('No airports found for country code: $countryCode');
@@ -374,9 +371,8 @@ class AirportData {
     String continentCode,
   ) {
     final code = continentCode.toUpperCase();
-    final airports = DataLoader.loadAirports()
-        .where((a) => a.continent == code)
-        .toList();
+    final airports =
+        DataLoader.loadAirports().where((a) => a.continent == code).toList();
 
     if (airports.isEmpty) {
       throw StateError('No airports found for continent code: $continentCode');
@@ -400,9 +396,8 @@ class AirportData {
     String sortBy = 'runway',
   ]) {
     final code = continentCode.toUpperCase();
-    final airports = DataLoader.loadAirports()
-        .where((a) => a.continent == code)
-        .toList();
+    final airports =
+        DataLoader.loadAirports().where((a) => a.continent == code).toList();
 
     if (sortBy == 'elevation') {
       airports.sort((a, b) {
@@ -654,8 +649,7 @@ class AirportData {
     final dLat = _degToRad(lat2 - lat1);
     final dLon = _degToRad(lon2 - lon1);
 
-    final a =
-        sin(dLat / 2) * sin(dLat / 2) +
+    final a = sin(dLat / 2) * sin(dLat / 2) +
         cos(_degToRad(lat1)) *
             cos(_degToRad(lat2)) *
             sin(dLon / 2) *
