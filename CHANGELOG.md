@@ -1,3 +1,9 @@
+## 1.0.1
+
+- Add CI/CD workflows for automated testing and pub.dev publishing
+- Add example, LICENSE, and CHANGELOG for improved pub.dev score
+- Fix dart formatting
+
 ## 1.0.0
 
 - Initial release
