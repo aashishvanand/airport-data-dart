@@ -1,3 +1,8 @@
+## 1.0.4
+
+- Use official dart-lang reusable workflow for pub.dev publishing
+- Simplify CI/CD: tag-based publish with dart-lang/setup-dart publish workflow
+
 ## 1.0.3
 
 - Fix automated publishing: use tag-based publish triggered by release branch
