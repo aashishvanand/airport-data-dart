@@ -1,16 +1,9 @@
-## 1.0.4
-
-- Use official dart-lang reusable workflow for pub.dev publishing
-- Simplify CI/CD: tag-based publish with dart-lang/setup-dart publish workflow
-
-## 1.0.3
-
-- Fix automated publishing: use tag-based publish triggered by release branch
-- Upgrade actions/checkout to v6 for Node.js 24 compatibility
-
 ## 1.0.2
 
-- Automate publishing via release branch with auto-tagging
+- Add CI/CD workflows for automated testing and pub.dev publishing
+- Add example, LICENSE, and CHANGELOG for improved pub.dev score
+- Upgrade actions/checkout to v6 for Node.js 24 compatibility
+- Fix dart formatting
 
 ## 1.0.1
 
