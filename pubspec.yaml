@@ -1,0 +1,19 @@
+name: airport_data
+description: >-
+  A comprehensive Dart library for retrieving airport information by IATA codes,
+  ICAO codes, country, continent, timezone, and more. Includes geographic proximity
+  search, distance calculation, bulk operations, and statistical analysis.
+version: 1.0.0
+homepage: https://github.com/aashishvanand/airport-data-dart
+repository: https://github.com/aashishvanand/airport-data-dart
+issue_tracker: https://github.com/aashishvanand/airport-data-dart/issues
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  archive: ^4.0.0
+
+dev_dependencies:
+  test: ^1.24.0
+  lints: ^5.0.0
