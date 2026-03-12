@@ -39,7 +39,7 @@ Every push to `main` and every pull request targeting `main` triggers the **CI**
 
 ### How Publishing Works
 
-Publishing to [pub.dev](https://pub.dev/packages/airport_data) is fully automated using the official [dart-lang reusable publish workflow](https://dart.dev/tools/pub/automated-publishing). It is triggered by pushing a git tag that matches the pattern `v*.*.*`.
+Publishing to [pub.dev](https://pub.dev/packages/airport_data) is fully automated via GitHub Actions using [OIDC authentication](https://dart.dev/tools/pub/automated-publishing). It is triggered by pushing a git tag that matches the pattern `v*.*.*`.
 
 pub.dev requires the publish to come from a **tag ref** (not a branch). The `pub.dev` GitHub Actions environment is configured with required reviewers, so every publish requires manual approval.
 
@@ -50,7 +50,7 @@ pub.dev requires the publish to come from a **tag ref** (not a branch). The `pub
 Edit `pubspec.yaml` and bump the `version` field:
 
 ```yaml
-version: 1.1.0  # was 1.0.4
+version: 1.1.0  # bump from previous version
 ```
 
 ### Step 2: Update the changelog
